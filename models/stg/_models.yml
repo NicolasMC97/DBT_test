@@ -1,0 +1,6 @@
+version: 2
+
+models:
+    - name: stg_hosts
+    - name: stg_listings
+    - name: stg_reviews

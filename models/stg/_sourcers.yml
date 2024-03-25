@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name: AIRBNB
+    database : airbnb
+    schema : raw
+    description: This is a replica of the AIRBN data extracted from s3
+    tables:
+      - name: src_hosts
+        identifier: raw_hosts 
+        description: host information for dim
+      - name: src_reviews
+        identifier: raw_reviews
+        description: host information for fact reviews
+      - name: src_listings
+        identifier: raw_listings
+        description: host information for dim lists
