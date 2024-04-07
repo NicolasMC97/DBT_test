@@ -1,4 +1,5 @@
 {% snapshot scd_raw_hosts %}
+
 {{
 config(
 target_schema='DEV',
@@ -8,6 +9,6 @@ target_schema='DEV',
        invalidate_hard_deletes=True
 ) }}
 
-select * FROM {{ source('airbnb', 'hosts') }}
+select * FROM {{ source('AIRBNB', 'src_hosts') }}
 
 {% endsnapshot %}
