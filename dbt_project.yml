@@ -40,3 +40,16 @@ models:
     # Applies to all files under models/example/
     example:
       +materialized: table
+
+
+dispatch:
+  - macro_namespace: dbt
+    search_order:
+      - DBT_test
+      - dbt_snowflake_query_tags
+      - dbt
+
+
+query-comment:
+  comment: '{{ dbt_snowflake_query_tags.get_query_comment(node) }}'
+  append: true # Snowflake removes prefixed comments.
